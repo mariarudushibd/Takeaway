@@ -1,0 +1,36 @@
+# The Myth of the 100% Error-Free Coding Dataset
+
+The assertion that a coding dataset is **100% error-free** is generally considered impossible to guarantee due to the inherent complexity of software and testing limitations. While datasets exist that have been highly verified or filtered to have extremely low error rates, achieving absolute perfection is not a practical goal in software engineering.
+
+---
+
+### Key Context
+
+#### Practical Impossibility of Exhaustive Testing
+Achieving 100% exhaustive testing (testing every possible input and state combination) is practically impossible for modern, complex applications.
+
+#### Types of Errors
+Even if code compiles and runs, it can still contain subtle logic errors that are difficult to detect through automated testing alone and may go unnoticed without methodical analysis.
+
+---
+
+### Verification Methods in Datasets
+
+Researchers developing coding datasets use sophisticated methods to maximize correctness, such as:
+
+-   **Self-Verification:** Using an LLM to generate code and then testing it against human-written unit tests to filter out failures.
+-   **Canonical Solutions:** Verifying solutions against established, accepted answers from platforms like LeetCode to establish a high level of ground truth.
+-   **Manual Review/Operator Reclassification:** Human verification to ensure accuracy, especially for complex or unique cases.
+
+#### Error Rates
+Despite these rigorous methods, researchers often acknowledge that some errors may still exist, noting that corrections are "not 100% perfect". For example, one dataset aimed for an error rate below 2.5% through self-verification.
+
+---
+
+### Assertions in Code
+
+In programming, **assertions** are statements used during development to test if a condition is true, helping to identify errors early. The failure of an assertion (`AssertionError`) indicates a bug or an unexpected state has been reached.
+
+---
+
+In summary, the claim of a completely error-free dataset is more of an ideal than a verifiable reality in a robust software engineering context.
